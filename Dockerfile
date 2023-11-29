@@ -10,4 +10,4 @@ RUN pip3 install -r requirements.txt --no-cache-dir
 COPY . /app
 #ENTRYPOINT ["python3"]
 
-CMD ["/bin/sh", "-c", "python3 tues_db/manage.py makemigrations && python3 tues_db/manage.py migrate && python3 tues_db/manage.py runserver 0.0.0.0:8081"]
+CMD ["/bin/sh", "-c", "python3 tues_db/manage.py migrate && python3 tues_db/manage.py runserver 0.0.0.0:8081"]
